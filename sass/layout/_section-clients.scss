@@ -12,6 +12,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 1169px) {
+    flex-wrap: wrap;
+  }
 }
 .clients__box {
   display: flex;
@@ -36,5 +39,11 @@
   fill: #afb1b8;
   &:not(:last-child) {
     margin-right: 30px;
+  }
+  @media screen and (max-width: 737px) {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+  }
+  @media screen and (min-width: 738px) and (max-width: 1169px) {
+    flex-basis: calc((100% - 3 * 30px) / 3);
   }
 }
