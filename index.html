@@ -19,20 +19,33 @@
         <div class="container header__container">
         <nav class="header__nav">
             <a href="./index.html" lang="en" class="link  logo"><span>Web</span>Studio</a>
+            <button type="button" class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="mobile-menu__icon" width="40" height="40" aria-label="Переключатель мобильного меню">
+                <use class="icon-menu" href="./images/icons.svg#icon-mobile-menu"></use>
+                </svg>
+            </button>
+        <div class="menu-container js-menu-container" id="mobile-menu">
+            <button type="button" class="menu-toggle js-close-menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="mobile-menu__icon" width="40" height="40" aria-label="Переключатель мобильного меню">
+                    <use class="icon-close" href="./images/icons.svg#icon-close-mobile-menu"></use>
+                </svg>
+            </button>
         <ul class="list navigation__list">
             <li class="nav__item"><a href="./index.html" class="link nav__list current-page">Студия</a></li>
             <li class="nav__item"><a href="./portfolio.html" class="link nav__list">Портфолио</a></li>
             <li class="nav__item"><a href="" class="link nav__list">Контакты</a></li>
         </ul>
-        </nav>
+        
         <ul class="list header__contact-list">
-            <li class="header__contact-item"><a href="mailto:info@devstudio.com" class=" contact__list link"><svg class="contact__icon" width="16" height="12">
+            <li class="header__contact-item"><a href="mailto:info@devstudio.com" class="contact__list link"><svg class="contact__icon" width="16" height="12">
                 <use href="./images/icons.svg#icon-envelope"></use>
             </svg>info@devstudio.com</a></li>
-            <li class="header__contact-item"><a href="tel:+380961111111" class="link contact__list"><svg class="contact__icon" width="16" height="12">
+            <li class="header__contact-item"><a href="tel:+380961111111" class="contact__list link"><svg class="contact__icon" width="16" height="12">
                 <use href="./images/icons.svg#icon-smartphone"></use>
             </svg>+38 096 111 11 11</a></li>
         </ul>
+        </div>
+        </nav>
         </div>
     </header>
     <main>
@@ -368,7 +381,7 @@
         </div>
     </main>
     <footer class="footer">
-        <div class="container footer__container">
+        <div class="footer__container container">
             <div class="footer__tablet-position">
             <div class="footer__contact-list">
             <div class="footer__address">
@@ -433,5 +446,6 @@
     </div>
     </footer>
 <script src="./js/modal.js"></script>
+<script src="./js/mobile-menu.js"></script>
 </body>
 </html>
