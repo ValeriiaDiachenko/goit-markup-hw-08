@@ -63,7 +63,7 @@
   line-height: 16px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1199px) {
     text-align: center;
   }
 
@@ -118,12 +118,11 @@
 }
 
 .footer__subscription {
-  height: 86px;
-
   @media screen and (min-width: 1200px) {
     margin-left: 93px;
     width: 570px;
     display: flex;
+    height: 86px;
   }
 }
 .footer__form {
@@ -132,7 +131,7 @@
   align-items: center;
 }
 .footer-input {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1199px) {
     text-align: center;
   }
 }
@@ -146,7 +145,12 @@
 }
 .footer__form-input {
   display: inline-block;
-  width: 358px;
+  @media screen and (min-width: 480px) {
+    width: 358px;
+  }
+  @media screen and (max-width: 479px) {
+    width: 100%;
+  }
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
@@ -189,7 +193,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1199px) {
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;

@@ -319,12 +319,13 @@ body {
 
 .header__container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
-.header__nav {
-  display: flex;
+@media screen and (min-width: 768px) {
+  .header__container {
+    justify-content: space-between;
+  }
 }
 
 .header span {
@@ -351,20 +352,21 @@ body {
   margin-right: 50px;
 }
 
-.current-page {
-  position: relative;
-}
-
-.current-page::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 4px;
-  background-color: var(--accent-color);
-  border-radius: 2px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
+@media screen and (min-width: 768px) {
+  .current-page {
+    position: relative;
+  }
+  .current-page::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -437,29 +439,36 @@ body {
   }
 }
 
-.menu-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 999;
-  padding-top: 48px;
-  padding-bottom: 48px;
-  padding-left: 40px;
-  background: #ffffff;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
-  transform: translateX(100%);
-  transition: transform 250ms var(--transition-timing-function);
-}
-
-.menu-container.is-open {
-  transform: translateX(0);
+.menu-toggle:hover, .menu-toggle:focus {
+  fill: var(--accent-color);
 }
 
 @media screen and (max-width: 767px) {
   .menu-container {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 40px;
+    background: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+    transform: translateX(100%);
+    transition: transform 250ms var(--transition-timing-function);
+  }
+  .menu-container.is-open {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
@@ -750,7 +759,7 @@ body {
   margin-left: -30px;
 }
 
-@media screen and (min-width: 480px) and (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
   .team__list {
     display: flex;
     flex-wrap: wrap;
@@ -775,7 +784,7 @@ body {
   padding-bottom: 30px;
 }
 
-@media screen and (min-width: 480px) and (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
   .team__card {
     flex-basis: calc((100% - 2 * 30px) / 2);
   }
@@ -796,7 +805,6 @@ body {
 
 @media screen and (min-width: 480px) and (max-width: 768px) {
   .members-thumb {
-    width: 354px;
     justify-content: center;
     display: flex;
   }
@@ -804,7 +812,6 @@ body {
 
 @media screen and (min-width: 769px) and (max-width: 1200px) {
   .members-thumb {
-    width: 270px;
     justify-content: center;
     display: flex;
   }
@@ -1124,7 +1131,7 @@ body {
   color: #ffffff;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1199px) {
   .footer__title {
     text-align: center;
   }
@@ -1186,15 +1193,12 @@ body {
   background-color: var(--accent-color);
 }
 
-.footer__subscription {
-  height: 86px;
-}
-
 @media screen and (min-width: 1200px) {
   .footer__subscription {
     margin-left: 93px;
     width: 570px;
     display: flex;
+    height: 86px;
   }
 }
 
@@ -1204,7 +1208,7 @@ body {
   align-items: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1199px) {
   .footer-input {
     text-align: center;
   }
@@ -1221,7 +1225,6 @@ body {
 
 .footer__form-input {
   display: inline-block;
-  width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
@@ -1233,6 +1236,18 @@ body {
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (min-width: 480px) {
+  .footer__form-input {
+    width: 358px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .footer__form-input {
+    width: 100%;
+  }
 }
 
 .footer__form-input::placeholder {
@@ -1280,7 +1295,7 @@ body {
   transition-timing-function: var(--transition-timing-function);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1199px) {
   .footer__form-button {
     margin-left: auto;
     margin-right: auto;
