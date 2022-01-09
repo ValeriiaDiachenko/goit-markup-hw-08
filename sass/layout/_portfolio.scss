@@ -48,18 +48,15 @@
 .list__box {
   background: #ffffff;
   display: flex;
-  flex-basis: 100%;
-
+  // flex-basis: 100%;
   margin-top: 30px;
-  margin-left: 30px;
+
   @media screen and (min-width: 1200px) {
     flex-basis: calc(100% / 3 - 30px);
-    margin-top: 30px;
     margin-left: 30px;
   }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     flex-basis: calc(100% / 2 - 30px);
-    margin-top: 30px;
     margin-left: 30px;
   }
 
